@@ -8,5 +8,5 @@ To use:
 
 You should see a screen that resembles:
 
-![Screenshot #1](/assets/screenshot_1.png)
+![Screenshot #1](./assets/screenshot_1.png)
 
