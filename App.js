@@ -62,8 +62,9 @@ const App = () => {
         noCameraPermissionComponent={noCameraPermissionComponent}
       />
       <View style={styles.divider} />
-      {chosenAssets &&
-        chosenAssets.map((asset) => <AssetInfo assetInfo={asset} />)}
+      {chosenAssets.length > 0 ?
+        chosenAssets.map((asset) => <AssetInfo assetInfo={asset} />)
+      : <Text style={styles.textNoSelection}>No images selected</Text>}
       <View style={styles.screenBottomPadding} />
     </View>
   );
@@ -116,5 +117,13 @@ const styles = StyleSheet.create({
   },
   screenBottomPadding: {
     height: 30,
+  },
+  textNoSelection: {
+    fontSize: 20,
+    fontStyle: 'italic',
+    height: 50,
+    paddingTop: 20,
+    textAlign: 'center',
+    width: '100%',
   },
 });
